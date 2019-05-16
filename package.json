@@ -1,0 +1,33 @@
+{
+  "name": "vue-github-ribbon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howdy39/vue-github-ribbon.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/howdy39/vue-github-ribbon/issues"
+  },
+  "homepage": "https://github.com/howdy39/vue-github-ribbon#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/vue": "^5.0.11",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0"
+  }
+}
