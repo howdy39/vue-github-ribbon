@@ -27,7 +27,11 @@
     "@storybook/vue": "^5.0.11",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
+    "github-fork-ribbon-css": "^0.2.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.0"
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }

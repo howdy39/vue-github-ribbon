@@ -7,6 +7,8 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton';
 import Welcome from './Welcome';
 
+import GithubRibbon from '../src/components/GithubRibbon';
+
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
@@ -33,4 +35,10 @@ storiesOf('Button', module)
     methods: { action: action('clicked') },
   }));
 
+storiesOf('Ribbon', module).add('with basic', () => ({
+  components: { GithubRibbon },
+  template: '<github-ribbon />',
+  methods: { action: linkTo('Button') },
+}));
+  
 /* eslint-enable react/react-in-jsx-scope */
