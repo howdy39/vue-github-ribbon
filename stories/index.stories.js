@@ -1,10 +1,8 @@
-/* eslint-disable react/react-in-jsx-scope, react/no-this-in-sfc */
-
 import { storiesOf } from '@storybook/vue';
 
-import GithubRibbon from '../src/components/GithubRibbon';
+import GithubRibbon from '~/src/components/GithubRibbon';
 
-storiesOf('Ribbon', module)
+storiesOf('vue-github-ribbon', module)
   .add('basic', () => ({
     components: { GithubRibbon },
     template: `
@@ -65,6 +63,3 @@ storiesOf('Ribbon', module)
     }
   }));
 ;
-
-
-/* eslint-enable react/react-in-jsx-scope */
