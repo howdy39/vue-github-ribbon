@@ -42,7 +42,29 @@ storiesOf('Ribbon', module)
     <github-ribbon href="https://github.com/howdy39" position="right-bottom" title="#0000ff" color="#0000ff" />
   </div>
   `
+  }))
+  .add('prevent', () => ({
+    components: { GithubRibbon },
+    template: `
+  <div>
+    <github-ribbon href="https://github.com/howdy39" title="prevent" prevent />
+  </div>
+  `
+  }))
+  .add('@click', () => ({
+    components: { GithubRibbon },
+    template: `
+  <div>
+    <github-ribbon href="https://github.com/howdy39" title="@click" prevent @click="onClick" style="cursor: pointer"/>
+  </div>
+  `,
+    methods: {
+      onClick() {
+        alert('howdy!');
+      }
+    }
   }));
+;
 
 
 /* eslint-enable react/react-in-jsx-scope */

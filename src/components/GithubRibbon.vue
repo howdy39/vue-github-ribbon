@@ -4,13 +4,19 @@
     :title="title"
     :class="[position]"
     :href="href"
+    :style="styles"
+    @click="onClick"
+    v-prevent-click="prevent"
     class="github-fork-ribbon"
   >{{title}}</a>
 </template>
 
 <script>
 import Vue from "vue";
-export default Vue.extend({
+import PreventClick from "~/src/directives/prevent-click";
+Vue.directive("prevent-click", PreventClick);
+
+export default {
   props: {
     href: {
       type: String,
@@ -36,7 +42,7 @@ export default Vue.extend({
       type: String,
       default: "black"
     },
-    disabled: {
+    prevent: {
       type: Boolean,
       default: false
     }
@@ -44,9 +50,19 @@ export default Vue.extend({
   computed: {
     componentId() {
       return `vue-ribbon-${this._uid}`;
+    },
+    styles() {
+      let styles = {};
+      if (this.prevent) {
+        styles.cursor= "default";
+      }
+      return styles;
     }
   },
   methods: {
+    onClick(event) {
+      this.$emit("click");
+    },
     isLightColor() {
       let rgb = parseInt(this.color.substring(1), 16);
       let r = (rgb >> 16) & 0xff;
@@ -81,7 +97,7 @@ export default Vue.extend({
   beforeUpdate: function() {
     this.dynamicCSSClass();
   }
-});
+};
 </script>
 
 
